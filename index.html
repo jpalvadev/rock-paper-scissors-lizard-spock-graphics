@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ruslan+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <script src="js/script.js" defer></script> REMOVE COMMENT TO PLAY CONSOLE VERSION -->
+    <script src="js/graphics.js" defer></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Rock Paper Scissors Lizard Spock</title>
+  </head>
+  <body>
+    <section class="game-front">
+      <h1 class="game-front__heading">
+        Deep
+        <span class="game-front__title">
+          [rock, paper, scissors, lizard ,spock]
+        </span>
+        Blue
+      </h1>
+
+      <button class="btn btn--start">START</button>
+    </section>
+
+    <section class="hero-selection">
+      <h2 class="hero-selection__title">Choose your Hero</h2>
+      <div class="hero-selection__grid">
+        <div class="hero-selection__hero-card" data-hero-number="0">
+          <img
+            src="images/players/001-handsome.svg"
+            alt="Character 1"
+            class="hero-selection__img"
+          />
+          <p class="hero-selection__hero-name">Handsome</p>
+        </div>
+        <div class="hero-selection__hero-card" data-hero-number="1">
+          <img
+            src="images/players/002-actor.svg"
+            alt="Character 2"
+            class="hero-selection__img"
+          />
+          <p class="hero-selection__hero-name">Actor</p>
+        </div>
+        <div class="hero-selection__hero-card" data-hero-number="2">
+          <img
+            src="images/players/003-explorer.svg"
+            alt="Character 3"
+            class="hero-selection__img"
+          />
+          <p class="hero-selection__hero-name">Explorer</p>
+        </div>
+        <div class="hero-selection__hero-card" data-hero-number="3">
+          <img
+            src="images/players/004-architect.svg"
+            alt="Character 4"
+            class="hero-selection__img"
+          />
+          <p class="hero-selection__hero-name">Architect</p>
+        </div>
+        <div class="hero-selection__hero-card" data-hero-number="4">
+          <img
+            src="images/players/005-boy.svg"
+            alt="Character 5"
+            class="hero-selection__img"
+          />
+          <p class="hero-selection__hero-name">Boy</p>
+        </div>
+        <div class="hero-selection__hero-card" data-hero-number="5">
+          <img
+            src="images/players/006-bartender.svg"
+            alt="Character 6"
+            class="hero-selection__img"
+          />
+          <p class="hero-selection__hero-name">Bartender</p>
+        </div>
+        <div class="hero-selection__hero-card" data-hero-number="6">
+          <img
+            src="images/players/007-man.svg"
+            alt="Character 7"
+            class="hero-selection__img"
+          />
+          <p class="hero-selection__hero-name">Beardman</p>
+        </div>
+        <div class="hero-selection__hero-card" data-hero-number="7">
+          <img
+            src="images/players/008-manager.svg"
+            alt="Character 8"
+            class="hero-selection__img"
+          />
+          <p class="hero-selection__hero-name">Manager</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="vs-screen">
+      <div class="vs-screen__player vs-screen__player--1">
+        <div class="vs-screen__info vs-screen__info--1">
+          <h2>EXPLORER</h2>
+          <img
+            class="vs-screen__img vs-screen__img--1"
+            src="images/players/001-handsome.svg"
+            alt="Player One"
+          />
+        </div>
+      </div>
+
+      <div class="vs-screen__vs">
+        <img src="images/versus.png" alt="Versus image" />
+      </div>
+
+      <div class="vs-screen__player vs-screen__player--2">
+        <div class="vs-screen__info vs-screen__info--2">
+          <img
+            class="vs-screen__img vs-screen__img--2"
+            src="images/players/002-actor.svg"
+            alt="Player Two"
+          />
+          <h2>ACTOR</h2>
+        </div>
+      </div>
+    </section>
+    <section class="game-screen">
+      <div class="game-screen__health">
+        <div class="game-screen__healthbar game-screen__healthbar--1">
+          <div
+            class="game-screen__healthbar-life game-screen__healthbar-life--1"
+          ></div>
+
+          <!-- &nbsp; -->
+        </div>
+        <h2 class="game-screen__ko">KO</h2>
+        <div class="game-screen__healthbar game-screen__healthbar--2">
+          <div
+            class="game-screen__healthbar-life game-screen__healthbar-life--2"
+          ></div>
+          <!-- &nbsp; -->
+        </div>
+      </div>
+
+      <div class="game-screen__container">
+        <div class="game-screen__weapons game-screen__weapons--player">
+          <!-- <img
+            src="images/players/001-handsome.svg"
+            alt="Hero"
+            class="game-screen__weapon game-screen__weapon--player"
+          /> -->
+          <img
+            src="images/weapons/rock.png"
+            alt="Rock"
+            class="game-screen__weapon game-screen__weapon--rock"
+          />
+          <img
+            src="images/weapons/paper.png"
+            alt="Paper"
+            class="game-screen__weapon game-screen__weapon--paper"
+          />
+          <img
+            src="images/weapons/scissors.png"
+            alt="Scissors"
+            class="game-screen__weapon game-screen__weapon--scissors"
+          />
+          <img
+            src="images/weapons/lizard.png"
+            alt="Lizard"
+            class="game-screen__weapon game-screen__weapon--lizard"
+          />
+          <img
+            src="images/weapons/spock.png"
+            alt="Spock"
+            class="game-screen__weapon game-screen__weapon--spock"
+          />
+        </div>
+
+        <div class="game-screen__weapons cpu-weapons game-screen__weapons--cpu">
+          <!-- <img
+            src="images/players/001-handsome.svg"
+            alt="Hero"
+            class="game-screen__weapon game-screen__weapon--cpu"
+          /> -->
+          <img
+            src="images/weapons/rock.png"
+            alt="Rock"
+            class="game-screen__weapon cpu-weapons game-screen__weapon--rock"
+          />
+          <img
+            src="images/weapons/paper.png"
+            alt="Paper"
+            class="game-screen__weapon cpu-weapons game-screen__weapon--paper"
+          />
+          <img
+            src="images/weapons/scissors.png"
+            alt="Scissors"
+            class="game-screen__weapon cpu-weapons game-screen__weapon--scissors"
+          />
+          <img
+            src="images/weapons/lizard.png"
+            alt="Lizard"
+            class="game-screen__weapon cpu-weapons game-screen__weapon--lizard"
+          />
+          <img
+            src="images/weapons/spock.png"
+            alt="Spock"
+            class="game-screen__weapon cpu-weapons game-screen__weapon--spock"
+          />
+        </div>
+      </div>
+      <div class="game-screen__fight">
+        <h2 class="game-screen__outcome-text game-screen__outcome-text--1"></h2>
+        <div class="game-screen__hands">
+          <img
+            src="images/hands/rock.png"
+            alt=""
+            class="game-screen__hands--player"
+          />
+          <img
+            src="images/hands/rock.png"
+            alt=""
+            class="game-screen__hands--cpu"
+          />
+        </div>
+        <h2 class="game-screen__outcome-text game-screen__outcome-text--2"></h2>
+      </div>
+    </section>
+
+    <audio src="sounds/suffer.mp3" class="suffer"></audio>
+  </body>
+</html>
