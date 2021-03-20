@@ -1,7 +1,6 @@
 @import 'utils/variables';
 @import 'utils/mixins';
 @import 'utils/animations';
-@import 'utils/helpers';
 
 @import 'base/base';
 @import 'base/typography';
@@ -12,3 +11,4 @@
 @import 'layout/game-screen';
 
 @import 'components/button';
+@import 'components/modal';

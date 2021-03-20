@@ -146,14 +146,14 @@ p {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  visibility: visible;
-  opacity: 1;
+  visibility: hidden;
+  opacity: 0;
   transition: all 0.5s ease-in-out;
 }
 
-.game-front.hidden {
-  visibility: hidden;
-  opacity: 0;
+.game-front.visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .hero-selection {
@@ -496,21 +496,23 @@ p {
 
 .game-screen__weapons--player {
   background-color: var(--accent-color);
-  transform: scaleX(-1);
+  transform: translateX(-105vw) skewX(20deg) translateY(5vw);
   transition: all 0.7s cubic-bezier(0.5, -0.75, 0.7, 2) 0.2s;
 }
 
 .game-screen__weapons--player.visible {
-  transform: translateX(-105vw) skewX(20deg) translateY(5vw);
+  transform: none;
+  transform: scaleX(-1);
 }
 
 .game-screen__weapons--cpu {
   background-color: var(--lightest-blue);
+  transform: translateX(105vw) skewX(-20deg) translateY(5vw);
   transition: all 0.7s cubic-bezier(0.5, -0.75, 0.7, 2);
 }
 
 .game-screen__weapons--cpu.visible {
-  transform: translateX(105vw) skewX(-20deg) translateY(5vw);
+  transform: none;
 }
 
 .game-screen__weapon {
@@ -673,10 +675,50 @@ p {
   cursor: pointer;
 }
 
+.btn--rematch {
+  background-color: var(--shadow-light-blue);
+  color: var(--dark-blue);
+}
+
 .btn:hover {
   background: #ecc90b url(/images/pixel.png);
   transition-delay: 0.8s;
   animation: animate 0.8s steps(8) forwards;
   color: var(--dark-blue);
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  background: rgba(18, 35, 46, 0.85);
+  z-index: 100;
+}
+
+.modal.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__container {
+  margin: 20vh 15vw;
+  width: 70vw;
+  height: 60vh;
+  background: var(--shadow-light-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal__text {
+  font-size: 6vmin;
+  color: var(--accent-color);
 }
 /*# sourceMappingURL=main.css.map */

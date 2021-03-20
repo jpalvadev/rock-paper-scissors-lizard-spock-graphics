@@ -14,6 +14,11 @@
   font-family: var(--secondary-font);
   font-size: 3rem;
   cursor: pointer;
+
+  &--rematch {
+    background-color: var(--shadow-light-blue);
+    color: var(--dark-blue);
+  }
 }
 
 .btn:hover {

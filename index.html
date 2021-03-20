@@ -14,13 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ruslan+Display&display=swap"
       rel="stylesheet"
     />
-    <!-- <script src="js/script.js" defer></script> REMOVE COMMENT TO PLAY CONSOLE VERSION -->
+    <!-- <script src="js/console_version.js" defer></script> REMOVE COMMENT TO PLAY CONSOLE VERSION (and comment next line) -->
     <script src="js/graphics.js" defer></script>
     <link rel="stylesheet" href="css/main.css" />
     <title>Rock Paper Scissors Lizard Spock</title>
   </head>
   <body>
-    <section class="game-front">
+    <section class="game-front visible">
       <h1 class="game-front__heading">
         Deep
         <span class="game-front__title">
@@ -135,15 +135,12 @@
           <div
             class="game-screen__healthbar-life game-screen__healthbar-life--1"
           ></div>
-
-          <!-- &nbsp; -->
         </div>
         <h2 class="game-screen__ko">KO</h2>
         <div class="game-screen__healthbar game-screen__healthbar--2">
           <div
             class="game-screen__healthbar-life game-screen__healthbar-life--2"
           ></div>
-          <!-- &nbsp; -->
         </div>
       </div>
 
@@ -232,6 +229,15 @@
       </div>
     </section>
 
+    <section class="modal">
+      <div class="modal__container">
+        <h2 class="modal__text">You Win!!!</h2>
+        <button class="btn btn--rematch">REMATCH</button>
+      </div>
+    </section>
+
     <audio src="sounds/suffer.mp3" class="suffer"></audio>
+    <audio src="sounds/you-win.mp3" class="you-win"></audio>
+    <audio src="sounds/you-lose.mp3" class="you-lose"></audio>
   </body>
 </html>
