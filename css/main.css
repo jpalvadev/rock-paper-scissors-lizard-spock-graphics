@@ -681,7 +681,7 @@ p {
 }
 
 .btn:hover {
-  background: #ecc90b url(/images/pixel.png);
+  background: #ecc90b url(../images/pixel.png);
   transition-delay: 0.8s;
   animation: animate 0.8s steps(8) forwards;
   color: var(--dark-blue);
